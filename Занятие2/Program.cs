@@ -89,27 +89,104 @@ namespace Занятие2
 
             ////Console.WriteLine(peremennaya);
 
-            string stroka = "Summer time";
-            int newlines = 10;
-            int chisloProbelov = 5;
+            //string stroka = "Summer time";
+            //int newlines = 10;
+            //int chisloProbelov = 5;
 
-            Pechat(stroka, newlines, chisloProbelov);
+            //Pechat(stroka, newlines, chisloProbelov);
 
-            Pechat(stroka, newlines, 0);
-            Pechat(stroka, 0, 0);
-            Pechat(stroka);
+            //Pechat(stroka, newlines, 0);
+            //Pechat(stroka, 0, 0);
+            //Pechat(stroka);
 
-            VesVodi(20);
-            VesVodi(20, 200, 3, 144);
+            //VesVodi(20);
+            //VesVodi(20, 200, 3, 144);
 
-            Pechat(stroka, newlines);
-            Pechat(stroka);
+            //Pechat(stroka, newlines);
+            //Pechat(stroka);
 
-            Console.ReadKey();
+            //Pechat("jdjdjdj");
+            //Pechat(30);
 
-            Console.Clear();
+            //Console.ReadKey();
 
-            Pechat("Другая строка", 20, 20);
+            //Console.Clear();
+
+            //Pechat("Другая строка", 20, 20);
+
+            string car1 = "Porsche";
+            string car2 = "Lada";
+            string car3 = "Cherokee";
+
+            string chosenCar = car2;
+
+            if (chosenCar == "Porsche")
+                Console.WriteLine("Хороший выбор, немецкий автомобиль очень надёжен");
+            else if (chosenCar == "Lada")
+                Console.WriteLine("На год езды хватит");
+            else if (chosenCar == "Cherokee")
+                Console.WriteLine("Хороший вездеход");
+
+            double price = 700000;
+            if (price <= 700000)
+            {
+                Console.WriteLine("Бюджетная машина");
+            }
+            else if (price > 700000 && price <= 1300000)
+            {
+
+            }
+            else if (price > 1300000 && price < 5000000)
+            {
+
+            }
+            else
+            {
+
+            }
+
+            if(a < 0)
+            {
+               Console.writeli
+            }
+            else
+            {
+
+            }
+
+            if ( (temp < 0) || (temp > 100) || (temp > 3 && temp < 5))
+
+            switch(chosenCar)
+            {
+                case "Porsche":
+                    Console.WriteLine("Хороший выбор, немецкий автомобиль очень надёжен");
+                    break;
+                case "Lada":
+                    Console.WriteLine("На год езды хватит");
+                    break;
+                case "Cherokee":
+                    Console.WriteLine("Хороший вездеход");
+                    break;
+                default:
+                    Console.WriteLine("Ждём Вас снова");
+                    break;
+            }
+
+            int a;
+            a = 10;
+            double k = 1;
+            Models model = Models.LadaKalina;
+            CarType type = CarType.Light;
+
+            switch(type)
+            {
+                case CarType.Light:
+                    Console.WriteLine();
+                    break;
+                case CarType.Truck:
+                    Console.WriteLine();
+                    break;
+            }
 
             Console.WriteLine();
             Console.ReadKey();
@@ -139,6 +216,10 @@ namespace Занятие2
         {
             Pechat(s, 0, 0);
         }
+        private static void Pechat(double a)
+        {
+            Console.WriteLine(a + 22);
+        }
         private static double VesVodi(double V, double temperatura, double yrovenSoli, double visotaNadYrovnemMorya)
         {
             Pechat("lalala");
@@ -147,6 +228,19 @@ namespace Занятие2
         private static double VesVodi(double V)
         {
             return 1;
+        }
+        public enum Models
+        {
+            Cherokee,
+            LadaKalina,
+            LadaPriora,
+            NissanJyk
+        }
+        public enum CarType
+        {
+            Light,
+            Jeep,
+            Truck
         }
 
     }
