@@ -10,308 +10,68 @@ namespace Занятие2
     {
         static void Main(string[] args)
         {
-            Telephone tel = new Telephone();
-            tel.RAM = 2000000;
-            tel.ProcessorTime = 100;
-            tel.IsFlashed = false;
-            tel.Weight = 200;
-            tel.Diagonal = 5.1;
-            tel.Color = ConsoleColor.Red;
-
-            tel.TakePhoto();
-            tel.TurnOnApplication();
-
-            Telephone tel2 = new Telephone();
-            tel2.RAM = 2000000;
-            tel2.ProcessorTime = 100;
-            tel2.IsFlashed = false;
-            tel2.Weight = 200;
-            tel2.Diagonal = 5.1;
-            tel2.Color = ConsoleColor.Gray;
-
-            Telephone tel3 = new Telephone(150);
-            int a = tel3.TakePhoto();
-            int b = tel.Photos;
-
-
-            //double a = 1;
-            //double b = 6;
-            //double c = 10;
-            //double d = 15;
-            //double i = 1.5;
-
-            //double sum = a + b + c + d + i;
-            //Console.Writel2ine("Сумма чисел равна:");
-            //Console.WriteLine(sum + "\n\n");
-
-            //double srednee = sum / 5;
-
-            //Console.WriteLine("Первое число: " + a + " " + "Среднее число: " + srednee);
-
-
-            //if (a > srednee)
-            //    Console.WriteLine("Первое число больше среднего");
-            //else if (a < srednee)
-            //    Console.WriteLine("Первое число меньше среднего");
-            //else if (a == srednee)
-            //    Console.WriteLine("Первое число равно среднему");
-            //else
-            //{
-
-            //}
-
-
-            //for (1; 2; 3)
-            //{
-
-            //}
-
-            //int a;
-            //a++;
-            //a--
-            //++a;
-            //a = a + 1;
-            //a += 5;
-            //a = a + 5;
-            //a /= 10;
-            //a -= 10;
-            //a += 10;
-
-
-
-            for (int i = 10; i > 0; i--)
-            {
-                Console.WriteLine(i);
-            }
-
-
-            for (int i = 1; i <= 10; i++)
-            {
-                //if ((i % 2) == 1)
-                //{
-                //    continue;
-                //}
-                if (i == 6)
-                {
-                    break;
-                }
-                Console.WriteLine(" i равно " + i + "\n\n");
-
-                for (int j = i - 1; j > 0; j--)
-                {
-                    Console.WriteLine("\t" + j);
-                }
-
-
-                //    //if ((i % 2) == 0)
-                //    //{
-                //    //    Console.WriteLine(i);
-                //    //}
-                //}
-                ////int k = 11;
-                ////double peremennaya = Percents(k);
-
-                ////Console.WriteLine(peremennaya);
-
-                //string stroka = "Summer time";
-                //int newlines = 10;
-                //int chisloProbelov = 5;
-
-                //Pechat(stroka, newlines, chisloProbelov);
-
-                //Pechat(stroka, newlines, 0);
-                //Pechat(stroka, 0, 0);
-                //Pechat(stroka);
-
-                //VesVodi(20);
-                //VesVodi(20, 200, 3, 144);
-
-                //Pechat(stroka, newlines);
-                //Pechat(stroka);
-
-                //Pechat("jdjdjdj");
-                //Pechat(30);
-
-                //Console.ReadKey();
-
-                //Console.Clear();
-
-                //Pechat("Другая строка", 20, 20);
-                string car1 = "Porsche";
-            string car2 = "Lada";
-            string car3 = "Cherokee";
-
-            string chosenCar = car2;
-
-            if (chosenCar == "Porsche")
-                Console.WriteLine("Хороший выбор, немецкий автомобиль очень надёжен");
-            else if (chosenCar == "Lada")
-                Console.WriteLine("На год езды хватит");
-            else if (chosenCar == "Cherokee")
-                Console.WriteLine("Хороший вездеход");
-
-            double price = 700000;
-            if (price <= 700000)
-            {
-                Console.WriteLine("Бюджетная машина");
-            }
-            else if (price > 700000 && price <= 1300000)
-            {
-
-            }
-            else if (price > 1300000 && price < 5000000)
-            {
-
-            }
-            else
-            {
-
-            }
-
-            if(a < 0)
-            {
-               Console.writeli
-            }
-            else
-            {
-
-            }
-
-            if ( (temp < 0) || (temp > 100) || (temp > 3 && temp < 5))
-
-            switch(chosenCar)
-            {
-                case "Porsche":
-                    Console.WriteLine("Хороший выбор, немецкий автомобиль очень надёжен");
-                    break;
-                case "Lada":
-                    Console.WriteLine("На год езды хватит");
-                    break;
-                case "Cherokee":
-                    Console.WriteLine("Хороший вездеход");
-                    break;
-                default:
-                    Console.WriteLine("Ждём Вас снова");
-                    break;
-            }
-
             int a;
-            a = 10;
-            double k = 1;
-            Models model = Models.LadaKalina;
-            CarType type = CarType.Light;
+            a = 5;
 
-            switch(type)
+            double[] massiv;
+            massiv = new double[100];
+
+            for (int i=0; i<100 ;i++)
             {
-                case CarType.Light:
-                    Console.WriteLine();
-                    break;
-                case CarType.Truck:
-                    Console.WriteLine();
-                    break;
+                if (i == 0)
+                    massiv[i] = 1;
+                else
+                    massiv[i] = massiv[i-1] * i;
             }
-
-            Console.WriteLine();
+            for (int i=0; i<100;i++)
+            {
+                Console.WriteLine(massiv[i]);
+            }
             Console.ReadKey();
+
+            string[] massivStrok;
+            massivStrok = new string[20];
+            massivStrok[0] = "0-ая строка";
+            massivStrok[8] = "8-ая строка";
+
+            for (int i=0; i < 20;i++)
+                Console.WriteLine(massivStrok[i]);
+
+            double b = 2 * 2 * 2 * 2 * 2;
+            //Math m = new Math();
+            b = Math.Pow(2, 20);
+
+            b = MyClass.Method1(3, 7);
+
+            double[] massiv2 = new double[20];
+            massiv2[11] = 100;
+            massiv2[3] = 8;
+            double sredneearifm;
+            b = MyClass.SredneeArifmeticheskoe(massiv2);
         }
-        private static double Percents(int a, int b, int c, double d, double e)
+    }
+
+    public static class MyClass
+    {
+        public static double Method1(double a, double b)
         {
-            double result = a * 0.01;
-            Console.WriteLine("Мы внутри метода");
+            double result = a;
+            for (int i=0; i < b -1 ; i++)
+            {
+                result = result * a;
+            }
             return result;
         }
-        private static void Pechat(string s, int lines, int probeli)
+        public static double SredneeArifmeticheskoe(double[] chisla)
         {
-            for (int i = 0; i < lines; i++)
+            double result = 0;
+            for (int i=0; i < chisla.Length;i++)
             {
-                Console.Write("\n");
+                result = result + chisla[i];
             }
-            for (int i = 0; i < probeli; i++)
-                Console.Write(" ");
-
-            Console.WriteLine(s);
-        }
-        private static void Pechat(string s, int lines)
-        {
-            Pechat(s, lines, 0);
-        }
-        private static void Pechat(string s)
-        {
-            Pechat(s, 0, 0);
-        }
-        private static void Pechat(double a)
-        {
-            Console.WriteLine(a + 22);
-        }
-        private static double VesVodi(double V, double temperatura, double yrovenSoli, double visotaNadYrovnemMorya)
-        {
-            Pechat("lalala");
-            return V*temperatura*0.01*yrovenSoli/visotaNadYrovnemMorya * 1.0034;
-        }
-        private static double VesVodi(double V)
-        {
-            return 1;
-        }
-        public enum Models
-        {
-            Cherokee,
-            LadaKalina,
-            LadaPriora,
-            NissanJyk
-        }
-        public enum CarType
-        {
-            Light,
-            Jeep,
-            Truck
-        }
-
-    }
-    public class Telephone
-    {
-        public double Weight;
-        public ConsoleColor Color;
-        public double RAM;
-        public double Diagonal;
-        public bool IsFlashed;
-        public double ProcessorTime = 100;
-        public int Photos;
-
-        public Telephone()
-        {
-            Photos = 0;
-        }
-        public Telephone(double weight)
-        {
-            Weight = weight;
-            Photos = 0;
-        }
-        public Telephone(double weight, double ram, double processorTime)
-        {
-            Weight = weight;
-            RAM = ram;
-            ProcessorTime = processorTime;
-            Photos = 0;
-        }
-
-
-        public int TakePhoto()
-        {
-            Photos++;
-            return Photos;
-        }
-        public void TurnOnFlash()
-        {
-            IsFlashed = true;
-        }
-        public void TurnOffFlash()
-        {
-            IsFlashed = false;
-        }
-        public void TurnOnApplication()
-        {
-            RAM = RAM - 100;
-            ProcessorTime = ProcessorTime - 10;
+            result = result / chisla.Length;
+            return result;
         }
     }
+
 }
