@@ -10,6 +10,30 @@ namespace Занятие2
     {
         static void Main(string[] args)
         {
+            Telephone tel = new Telephone();
+            tel.RAM = 2000000;
+            tel.ProcessorTime = 100;
+            tel.IsFlashed = false;
+            tel.Weight = 200;
+            tel.Diagonal = 5.1;
+            tel.Color = ConsoleColor.Red;
+
+            tel.TakePhoto();
+            tel.TurnOnApplication();
+
+            Telephone tel2 = new Telephone();
+            tel2.RAM = 2000000;
+            tel2.ProcessorTime = 100;
+            tel2.IsFlashed = false;
+            tel2.Weight = 200;
+            tel2.Diagonal = 5.1;
+            tel2.Color = ConsoleColor.Gray;
+
+            Telephone tel3 = new Telephone(150);
+            int a = tel3.TakePhoto();
+            int b = tel.Photos;
+
+
             //double a = 1;
             //double b = 6;
             //double c = 10;
@@ -17,7 +41,7 @@ namespace Занятие2
             //double i = 1.5;
 
             //double sum = a + b + c + d + i;
-            //Console.WriteLine("Сумма чисел равна:");
+            //Console.Writel2ine("Сумма чисел равна:");
             //Console.WriteLine(sum + "\n\n");
 
             //double srednee = sum / 5;
@@ -55,66 +79,65 @@ namespace Занятие2
 
 
 
-            //for (int i = 10; i > 0; i--)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            for (int i = 10; i > 0; i--)
+            {
+                Console.WriteLine(i);
+            }
 
 
-            //for (int i = 1; i <= 10; i++)
-            //{
-            //    //if ((i % 2) == 1)
-            //    //{
-            //    //    continue;
-            //    //}
-            //    if (i == 6)
-            //    {
-            //        break;
-            //    }
-            //    Console.WriteLine(" i равно " + i + "\n\n");
+            for (int i = 1; i <= 10; i++)
+            {
+                //if ((i % 2) == 1)
+                //{
+                //    continue;
+                //}
+                if (i == 6)
+                {
+                    break;
+                }
+                Console.WriteLine(" i равно " + i + "\n\n");
 
-            //    for (int j = i - 1; j > 0; j--)
-            //    {
-            //        Console.WriteLine("\t" + j);
-            //    }
+                for (int j = i - 1; j > 0; j--)
+                {
+                    Console.WriteLine("\t" + j);
+                }
 
 
-            //    //if ((i % 2) == 0)
-            //    //{
-            //    //    Console.WriteLine(i);
-            //    //}
-            //}
-            ////int k = 11;
-            ////double peremennaya = Percents(k);
+                //    //if ((i % 2) == 0)
+                //    //{
+                //    //    Console.WriteLine(i);
+                //    //}
+                //}
+                ////int k = 11;
+                ////double peremennaya = Percents(k);
 
-            ////Console.WriteLine(peremennaya);
+                ////Console.WriteLine(peremennaya);
 
-            //string stroka = "Summer time";
-            //int newlines = 10;
-            //int chisloProbelov = 5;
+                //string stroka = "Summer time";
+                //int newlines = 10;
+                //int chisloProbelov = 5;
 
-            //Pechat(stroka, newlines, chisloProbelov);
+                //Pechat(stroka, newlines, chisloProbelov);
 
-            //Pechat(stroka, newlines, 0);
-            //Pechat(stroka, 0, 0);
-            //Pechat(stroka);
+                //Pechat(stroka, newlines, 0);
+                //Pechat(stroka, 0, 0);
+                //Pechat(stroka);
 
-            //VesVodi(20);
-            //VesVodi(20, 200, 3, 144);
+                //VesVodi(20);
+                //VesVodi(20, 200, 3, 144);
 
-            //Pechat(stroka, newlines);
-            //Pechat(stroka);
+                //Pechat(stroka, newlines);
+                //Pechat(stroka);
 
-            //Pechat("jdjdjdj");
-            //Pechat(30);
+                //Pechat("jdjdjdj");
+                //Pechat(30);
 
-            //Console.ReadKey();
+                //Console.ReadKey();
 
-            //Console.Clear();
+                //Console.Clear();
 
-            //Pechat("Другая строка", 20, 20);
-
-            string car1 = "Porsche";
+                //Pechat("Другая строка", 20, 20);
+                string car1 = "Porsche";
             string car2 = "Lada";
             string car3 = "Cherokee";
 
@@ -244,8 +267,51 @@ namespace Занятие2
         }
 
     }
-    public class MyClass
+    public class Telephone
     {
+        public double Weight;
+        public ConsoleColor Color;
+        public double RAM;
+        public double Diagonal;
+        public bool IsFlashed;
+        public double ProcessorTime = 100;
+        public int Photos;
 
+        public Telephone()
+        {
+            Photos = 0;
+        }
+        public Telephone(double weight)
+        {
+            Weight = weight;
+            Photos = 0;
+        }
+        public Telephone(double weight, double ram, double processorTime)
+        {
+            Weight = weight;
+            RAM = ram;
+            ProcessorTime = processorTime;
+            Photos = 0;
+        }
+
+
+        public int TakePhoto()
+        {
+            Photos++;
+            return Photos;
+        }
+        public void TurnOnFlash()
+        {
+            IsFlashed = true;
+        }
+        public void TurnOffFlash()
+        {
+            IsFlashed = false;
+        }
+        public void TurnOnApplication()
+        {
+            RAM = RAM - 100;
+            ProcessorTime = ProcessorTime - 10;
+        }
     }
 }
